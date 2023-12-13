@@ -105,12 +105,12 @@ function App() {
                           {...provided.droppableProps}
                           ref={provided.innerRef}
                           style={{
-                            background: snapshot.isDraggingOver
-                              ? "lightblue"
-                              : "lightgrey",
+                            background: snapshot.isDraggingOver ? "white" : "white",
                             padding: 4,
                             width: 250,
-                            minHeight: 500
+                            minHeight: 500,
+                            border: "2px solid black",
+                            borderRadius: 4, // Se desejar cantos arredondados, ajuste conforme necessário
                           }}
                         >
                           {/* Mapeando e renderizando cada tarefa dentro da coluna */}
@@ -134,11 +134,11 @@ function App() {
                                         padding: 16,
                                         margin: "0 0 8px 0",
                                         minHeight: "50px",
-                                        backgroundColor: snapshot.isDragging
-                                          ? "#263B4A"
-                                          : "#456C86",
-                                        color: "white",
-                                        ...provided.draggableProps.style
+                                        backgroundColor: "white",
+                                        color: "black",
+                                        ...provided.draggableProps.style,
+                                        border: "2px solid black", // Adiciona uma borda de 2 pixels sólidos pretos
+                                        borderRadius: 4, // Ajuste conforme necessário para cantos arredondados
                                       }}
                                     >
                                       {/* Conteúdo da tarefa */}
